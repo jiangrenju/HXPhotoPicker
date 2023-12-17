@@ -519,7 +519,7 @@ public extension EditorConfiguration {
         }
     }
 
-    struct ToolsView {
+    public struct ToolsView {
         /// 工具栏item选项
         public var toolOptions: [Options]
         
@@ -580,6 +580,92 @@ public extension EditorConfiguration {
                 case cropSize
             }
         }
+        
+        public static let time = Options(
+                imageName: "hx_editor_tools_play",
+                type: .time
+            )
+        
+        public static let graffiti = Options(
+                imageName: "hx_editor_tools_graffiti",
+                type: .graffiti
+            )
+
+        public static let chartlet = Options(
+                imageName: "hx_editor_photo_tools_emoji",
+                type: .chartlet
+            )
+
+        public static let text = Options(
+                imageName: "hx_editor_photo_tools_text",
+                type: .text
+            )
+        
+        public static let cropSize = Options(
+                imageName: "hx_editor_photo_crop",
+                type: .cropSize
+            )
+        
+        public static let music = Options(
+            imageName: "hx_editor_tools_music",
+            type: .music
+        )
+
+        public static let mosaic = Options(
+            imageName: "hx_editor_tools_mosaic",
+            type: .mosaic
+        )
+
+        public static let filterEdit = Options(
+            imageName: "hx_editor_tools_filter_change",
+            type: .filterEdit
+        )
+        
+        public static let filter = Options(
+            imageName: "hx_editor_tools_filter",
+            type: .filter
+        )
+        
+        public static var jnCustom: ToolsView {
+            let time = Options(
+                imageName: "hx_editor_tools_play",
+                type: .time
+            )
+            let graffiti = Options(
+                imageName: "hx_editor_tools_graffiti",
+                type: .graffiti
+            )
+            let chartlet = Options(
+                imageName: "hx_editor_photo_tools_emoji",
+                type: .chartlet
+            )
+            let text = Options(
+                imageName: "hx_editor_photo_tools_text",
+                type: .text
+            )
+            let cropSize = Options(
+                imageName: "hx_editor_photo_crop",
+                type: .cropSize
+            )
+            let music = Options(
+                imageName: "hx_editor_tools_music",
+                type: .music
+            )
+            let mosaic = Options(
+                imageName: "hx_editor_tools_mosaic",
+                type: .mosaic
+            )
+            let filterEdit = Options(
+                imageName: "hx_editor_tools_filter_change",
+                type: .filterEdit
+            )
+            let filter = Options(
+                imageName: "hx_editor_tools_filter",
+                type: .filter
+            )
+            return .init(toolOptions: [time, graffiti, chartlet, text, cropSize, mosaic, filterEdit, filter, music])
+        }
+
         
         public static var `default`: ToolsView {
             let time = Options(

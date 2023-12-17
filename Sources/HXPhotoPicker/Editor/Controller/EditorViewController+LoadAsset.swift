@@ -435,6 +435,11 @@ extension EditorViewController {
     func loadVideoControl() {
         let asset = selectedAsset
         switch asset.type {
+        case .videoAsset(let avAsset):
+            videoControlView.layoutSubviews()
+            videoControlView.loadData(avAsset)
+            updateVideoTimeRange()
+            isLoadVideoControl = true
         case .video(let videoURL):
             videoControlView.layoutSubviews()
             videoControlView.loadData(.init(url: videoURL))

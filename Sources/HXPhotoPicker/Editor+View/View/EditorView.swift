@@ -133,7 +133,11 @@ open class EditorView: UIScrollView {
         adjusterView.contentScale
     }
     var layoutContent: Bool = true
-    var reloadContent: Bool = false
+    var reloadContent: Bool = false {
+        didSet {
+            
+        }
+    }
     var operates: [Operate] = []
     var reloadOperates: [Operate] = []
      
