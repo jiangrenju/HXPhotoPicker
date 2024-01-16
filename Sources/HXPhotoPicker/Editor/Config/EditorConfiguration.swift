@@ -519,7 +519,7 @@ public extension EditorConfiguration {
         }
     }
 
-    public struct ToolsView {
+    struct ToolsView {
         /// 工具栏item选项
         public var toolOptions: [Options]
         
